@@ -1,0 +1,122 @@
+[
+  {
+    "id": "INC001",
+    "source": "Product Sales",
+    "sourceAr": "مبيعات المنتجات",
+    "amount": 125000,
+    "date": "2025-01-15",
+    "month": "2025-01",
+    "category": "Sales",
+    "notes": "Regular monthly sales revenue",
+    "notesAr": "إيرادات المبيعات الشهرية المنتظمة",
+    "invoiceNumber": "INV-2025-001"
+  },
+  {
+    "id": "INC002",
+    "source": "Wholesale Orders",
+    "sourceAr": "طلبات الجملة",
+    "amount": 85000,
+    "date": "2025-01-18",
+    "month": "2025-01",
+    "category": "Sales",
+    "notes": "Bulk order from distributors",
+    "notesAr": "طلب بالجملة من الموزعين",
+    "invoiceNumber": "INV-2025-002"
+  },
+  {
+    "id": "INC003",
+    "source": "Export Sales",
+    "sourceAr": "مبيعات التصدير",
+    "amount": 65000,
+    "date": "2025-01-22",
+    "month": "2025-01",
+    "category": "Sales",
+    "notes": "International market sales",
+    "notesAr": "مبيعات السوق الدولي",
+    "invoiceNumber": "INV-2025-003"
+  },
+  {
+    "id": "INC004",
+    "source": "Product Sales",
+    "sourceAr": "مبيعات المنتجات",
+    "amount": 132000,
+    "date": "2025-02-10",
+    "month": "2025-02",
+    "category": "Sales",
+    "notes": "February sales increase",
+    "notesAr": "زيادة المبيعات في فبراير",
+    "invoiceNumber": "INV-2025-004"
+  },
+  {
+    "id": "INC005",
+    "source": "Wholesale Orders",
+    "sourceAr": "طلبات الجملة",
+    "amount": 92000,
+    "date": "2025-02-15",
+    "month": "2025-02",
+    "category": "Sales",
+    "notes": "New wholesale contracts",
+    "notesAr": "عقود جملة جديدة",
+    "invoiceNumber": "INV-2025-005"
+  },
+  {
+    "id": "INC006",
+    "source": "Retail Sales",
+    "sourceAr": "مبيعات التجزئة",
+    "amount": 48000,
+    "date": "2025-02-20",
+    "month": "2025-02",
+    "category": "Sales",
+    "notes": "Direct retail channel",
+    "notesAr": "قناة البيع بالتجزئة المباشرة",
+    "invoiceNumber": "INV-2025-006"
+  },
+  {
+    "id": "INC007",
+    "source": "Product Sales",
+    "sourceAr": "مبيعات المنتجات",
+    "amount": 145000,
+    "date": "2025-03-08",
+    "month": "2025-03",
+    "category": "Sales",
+    "notes": "Seasonal demand increase",
+    "notesAr": "زيادة الطلب الموسمي",
+    "invoiceNumber": "INV-2025-007"
+  },
+  {
+    "id": "INC008",
+    "source": "Wholesale Orders",
+    "sourceAr": "طلبات الجملة",
+    "amount": 98000,
+    "date": "2025-03-12",
+    "month": "2025-03",
+    "category": "Sales",
+    "notes": "Major distributor order",
+    "notesAr": "طلب من موزع رئيسي",
+    "invoiceNumber": "INV-2025-008"
+  },
+  {
+    "id": "INC009",
+    "source": "Export Sales",
+    "sourceAr": "مبيعات التصدير",
+    "amount": 72000,
+    "date": "2025-03-18",
+    "month": "2025-03",
+    "category": "Sales",
+    "notes": "Gulf market expansion",
+    "notesAr": "توسع سوق الخليج",
+    "invoiceNumber": "INV-2025-009"
+  },
+  {
+    "id": "INC010",
+    "source": "Investment Income",
+    "sourceAr": "دخل الاستثمارات",
+    "amount": 15000,
+    "date": "2025-03-31",
+    "month": "2025-03",
+    "category": "Investment",
+    "notes": "Quarterly dividend",
+    "notesAr": "أرباح ربع سنوية",
+    "invoiceNumber": "DIV-2025-Q1"
+  }
+]

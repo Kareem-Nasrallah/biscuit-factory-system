@@ -1,0 +1,67 @@
+[
+  {
+    "id": "pl-001",
+    "name": "Line A - Cookies",
+    "nameAr": "خط الإنتاج أ - البسكويت",
+    "status": "Running",
+    "capacity": 5000,
+    "currentProduction": 3750,
+    "efficiency": 75,
+    "lastMaintenance": "2025-09-15",
+    "nextMaintenance": "2025-10-15",
+    "operatorId": "emp-003",
+    "shift": "Morning"
+  },
+  {
+    "id": "pl-002",
+    "name": "Line B - Crackers",
+    "nameAr": "خط الإنتاج ب - الكراكرز",
+    "status": "Running",
+    "capacity": 4000,
+    "currentProduction": 3600,
+    "efficiency": 90,
+    "lastMaintenance": "2025-09-20",
+    "nextMaintenance": "2025-10-20",
+    "operatorId": "emp-005",
+    "shift": "Morning"
+  },
+  {
+    "id": "pl-003",
+    "name": "Line C - Wafers",
+    "nameAr": "خط الإنتاج ج - الويفر",
+    "status": "Maintenance",
+    "capacity": 3500,
+    "currentProduction": 0,
+    "efficiency": 0,
+    "lastMaintenance": "2025-10-03",
+    "nextMaintenance": "2025-11-03",
+    "operatorId": "emp-007",
+    "shift": "Evening"
+  },
+  {
+    "id": "pl-004",
+    "name": "Line D - Chocolate Biscuits",
+    "nameAr": "خط الإنتاج د - بسكويت الشوكولاتة",
+    "status": "Running",
+    "capacity": 4500,
+    "currentProduction": 4200,
+    "efficiency": 93,
+    "lastMaintenance": "2025-09-25",
+    "nextMaintenance": "2025-10-25",
+    "operatorId": "emp-009",
+    "shift": "Night"
+  },
+  {
+    "id": "pl-005",
+    "name": "Line E - Sandwich Cookies",
+    "nameAr": "خط الإنتاج هـ - البسكويت الساندويتش",
+    "status": "Stopped",
+    "capacity": 3000,
+    "currentProduction": 0,
+    "efficiency": 0,
+    "lastMaintenance": "2025-09-18",
+    "nextMaintenance": "2025-10-18",
+    "operatorId": "emp-011",
+    "shift": "Evening"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "usr-001",
+    "username": "owner",
+    "password": "owner123",
+    "role": "Owner",
+    "employeeId": "emp-001",
+    "email": "ahmed@biscuitfactory.com"
+  },
+  {
+    "id": "usr-003",
+    "username": "production_manager",
+    "password": "productionManager123",
+    "role": "ProductionManager",
+    "employeeId": "emp-003",
+    "email": "mohammed.ali@biscuitfactory.com"
+  },
+  {
+    "id": "usr-002",
+    "username": "inventory_manager",
+    "password": "inventoryManager123",
+    "role": "InventoryManager",
+    "employeeId": "emp-002",
+    "email": "fatima@biscuitfactory.com"
+  }
+]

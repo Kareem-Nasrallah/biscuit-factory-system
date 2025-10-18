@@ -1,0 +1,92 @@
+[
+  {
+    "id": "CAT001",
+    "name": "Plain Biscuits",
+    "nameAr": "البسكويت السادة",
+    "description": "Simple, classic biscuits without additional flavors",
+    "descriptionAr": "البسكويت الكلاسيكي البسيط بدون نكهات إضافية",
+    "productCount": 8,
+    "icon": "cookie"
+  },
+  {
+    "id": "CAT002",
+    "name": "Chocolate Biscuits",
+    "nameAr": "بسكويت الشوكولاتة",
+    "description": "Biscuits with chocolate coating or chocolate chips",
+    "descriptionAr": "البسكويت مع طلاء الشوكولاتة أو رقائق الشوكولاتة",
+    "productCount": 12,
+    "icon": "chocolate"
+  },
+  {
+    "id": "CAT003",
+    "name": "Cream Filled",
+    "nameAr": "محشو بالكريمة",
+    "description": "Biscuits filled with various cream flavors",
+    "descriptionAr": "البسكويت المحشو بنكهات الكريمة المختلفة",
+    "productCount": 9,
+    "icon": "cream"
+  },
+  {
+    "id": "CAT004",
+    "name": "Sugar Free",
+    "nameAr": "خالي من السكر",
+    "description": "Healthy biscuits without added sugar",
+    "descriptionAr": "البسكويت الصحي بدون سكر مضاف",
+    "productCount": 5,
+    "icon": "health"
+  },
+  {
+    "id": "CAT005",
+    "name": "Kids Special",
+    "nameAr": "خاص بالأطفال",
+    "description": "Fun-shaped biscuits designed for children",
+    "descriptionAr": "البسكويت بأشكال ممتعة مصمم للأطفال",
+    "productCount": 7,
+    "icon": "kids"
+  },
+  {
+    "id": "CAT006",
+    "name": "Premium Assorted",
+    "nameAr": "المشكلات الفاخرة",
+    "description": "High-quality assorted biscuit collections",
+    "descriptionAr": "مجموعات البسكويت المشكل عالية الجودة",
+    "productCount": 6,
+    "icon": "premium"
+  },
+  {
+    "id": "CAT007",
+    "name": "Wafer Biscuits",
+    "nameAr": "بسكويت الويفر",
+    "description": "Light, crispy wafer-style biscuits",
+    "descriptionAr": "بسكويت الويفر الخفيف والمقرمش",
+    "productCount": 4,
+    "icon": "wafer"
+  },
+  {
+    "id": "CAT008",
+    "name": "Digestive & Oat",
+    "nameAr": "الهضمي والشوفان",
+    "description": "Healthy digestive biscuits with oats",
+    "descriptionAr": "البسكويت الهضمي الصحي مع الشوفان",
+    "productCount": 6,
+    "icon": "oat"
+  },
+  {
+    "id": "CAT009",
+    "name": "Cookies & Crunch",
+    "nameAr": "الكوكيز والمقرمش",
+    "description": "Crunchy cookies with various toppings",
+    "descriptionAr": "الكوكيز المقرمش مع إضافات متنوعة",
+    "productCount": 10,
+    "icon": "crunch"
+  },
+  {
+    "id": "CAT010",
+    "name": "Seasonal Special",
+    "nameAr": "الخاص الموسمي",
+    "description": "Limited edition seasonal varieties",
+    "descriptionAr": "أصناف موسمية محدودة الإصدار",
+    "productCount": 3,
+    "icon": "seasonal"
+  }
+]

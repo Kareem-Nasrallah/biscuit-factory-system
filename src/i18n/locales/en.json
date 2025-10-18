@@ -1,0 +1,142 @@
+{
+  "accessDenied": {
+    "title": "Access Denied",
+    "message": "You do not have permission to access this page. Please go back or sign in with an authorized account.",
+    "goBack": "Go Back",
+    "logout": "Logout"
+  },
+  "nav": {
+    "accounts": "Accounts",
+    "dashboard": "Dashboard",
+    "inventory": "Inventory",
+    "productionLines": "Production Lines",
+    "employees": "Employees & Shifts",
+    "orders": "Orders",
+    "qualityControl": "Quality Control",
+    "reports": "Reports",
+    "logout": "Logout"
+  },
+  "auth": {
+    "Credentials": {
+      "owner": "Owner",
+      "inventoryManager": "Inventory Manager",
+      "productionManager": "Production Manager",
+      "title": "Demo Credentials:"
+    },
+    "login": "Login",
+    "username": "Username",
+    "password": "Password",
+    "welcomeBack": "Welcome Back",
+    "loginSubtitle": "Enter your credentials to access the factory management system"
+  },
+  "dashboard": {
+    "title": "Factory Dashboard",
+    "description": "Monitor your factory's real-time performance",
+    "dailyProduction": "Daily Production",
+    "units": "units",
+    "lineUtilization": "Line Utilization",
+    "lowStock": "Low Stock Items",
+    "pendingOrders": "Pending Orders",
+    "productionTrend": "Production Trend (Last 7 Days)",
+    "linePerformance": "Line Performance",
+    "recentActivity": "Recent Activity"
+  },
+  "inventory": {
+    "title": "Inventory",
+    "description": "Manage your inventory and suppliers",
+    "addMaterial": "Add Material",
+    "name": "Name",
+    "quantity": "Quantity",
+    "minStock": "Min Stock",
+    "supplier": "Supplier",
+    "lastUpdated": "Last Updated",
+    "lowStockAlert": "Low Stock Alert",
+    "status": "Status",
+    "normal": "Normal",
+    "low": "Low Stock"
+  },
+  "productionLines": {
+    "title": "Production Lines",
+    "description": "Monitor production line performance and status",
+    "name": "Line Name",
+    "status": "Status",
+    "efficiency": "Efficiency",
+    "capacity": "Capacity",
+    "currentProduction": "Current Production",
+    "nextMaintenance": "Next Maintenance",
+    "running": "Running",
+    "stopped": "Stopped",
+    "maintenance": "Maintenance"
+  },
+  "employees": {
+    "title": "Employees & Shifts",
+    "description": "Manage employee shifts and attendance",
+    "addEmployee": "Add Employee",
+    "name": "Name",
+    "role": "Role",
+    "shift": "Shift",
+    "department": "Department",
+    "attendance": "Attendance",
+    "present": "Present",
+    "absent": "Absent",
+    "morning": "Morning",
+    "evening": "Evening",
+    "night": "Night"
+  },
+  "orders": {
+    "title": "Orders Management",
+    "description": "Track and manage customer orders",
+    "addOrder": "Add Order",
+    "orderNumber": "Order Number",
+    "client": "Client",
+    "quantity": "Quantity",
+    "status": "Status",
+    "deliveryDate": "Delivery Date",
+    "priority": "Priority",
+    "inProgress": "In Progress",
+    "ready": "Ready",
+    "shipped": "Shipped",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "quality": {
+    "title": "Quality Control",
+    "description": "Monitor batch quality and inspection results",
+    "batchNumber": "Batch Number",
+    "inspectionDate": "Inspection Date",
+    "inspector": "Inspector",
+    "quality": "Quality",
+    "defectRate": "Defect Rate",
+    "notes": "Notes",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "gradeA": "Grade A",
+    "gradeB": "Grade B"
+  },
+  "accounts": {
+    "title": "Accounts",
+    "description": "Income, Expenses, and Profit tracking"
+  },
+  "common": {
+    "actions": "Actions",
+    "search": "Search...",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "add": "Add",
+    "reset": "Reset",
+    "close": "Close",
+    "loading": "Loading...",
+    "noData": "No data available",
+    "theme": "Theme",
+    "language": "Language",
+    "english": "English",
+    "arabic": "Arabic",
+    "dark": "Dark",
+    "light": "Light",
+    "comingSoon": "Coming Soon",
+    "willBe": "will be available here"
+  }
+}

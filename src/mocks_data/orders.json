@@ -1,0 +1,80 @@
+[
+  {
+    "id": "ord-001",
+    "orderNumber": "ORD-2025-001",
+    "client": "Super Market Chain",
+    "clientAr": "سلسلة السوبر ماركت",
+    "productionLineId": "pl-001",
+    "quantity": 10000,
+    "unit": "boxes",
+    "status": "Shipped",
+    "orderDate": "2025-09-15",
+    "deliveryDate": "2025-09-28",
+    "priority": "High"
+  },
+  {
+    "id": "ord-002",
+    "orderNumber": "ORD-2025-002",
+    "client": "Wholesale Distributor",
+    "clientAr": "موزع الجملة",
+    "productionLineId": "pl-002",
+    "quantity": 8000,
+    "unit": "boxes",
+    "status": "Ready",
+    "orderDate": "2025-09-20",
+    "deliveryDate": "2025-10-05",
+    "priority": "Medium"
+  },
+  {
+    "id": "ord-003",
+    "orderNumber": "ORD-2025-003",
+    "client": "Retail Stores Group",
+    "clientAr": "مجموعة المتاجر",
+    "productionLineId": "pl-004",
+    "quantity": 15000,
+    "unit": "boxes",
+    "status": "In Progress",
+    "orderDate": "2025-09-25",
+    "deliveryDate": "2025-10-10",
+    "priority": "High"
+  },
+  {
+    "id": "ord-004",
+    "orderNumber": "ORD-2025-004",
+    "client": "Export Company Ltd.",
+    "clientAr": "شركة التصدير المحدودة",
+    "productionLineId": "pl-001",
+    "quantity": 20000,
+    "unit": "boxes",
+    "status": "In Progress",
+    "orderDate": "2025-09-28",
+    "deliveryDate": "2025-10-15",
+    "priority": "High"
+  },
+  {
+    "id": "ord-005",
+    "orderNumber": "ORD-2025-005",
+    "client": "Local Bakery Chain",
+    "clientAr": "سلسلة المخابز المحلية",
+    "productionLineId": "pl-002",
+    "quantity": 5000,
+    "unit": "boxes",
+    "status": "Ready",
+    "orderDate": "2025-09-30",
+    "deliveryDate": "2025-10-08",
+    "priority": "Low"
+  },
+  {
+    "id": "ord-006",
+    "orderNumber": "ORD-2025-006",
+    "client": "Convenience Stores Inc.",
+    "clientAr": "شركة المتاجر الصغيرة",
+    "productionLineId": "pl-004",
+    "quantity": 12000,
+    "unit": "boxes",
+    "status": "In Progress",
+    "orderDate": "2025-10-01",
+    "deliveryDate": "2025-10-12",
+    "priority": "Medium"
+  }
+]

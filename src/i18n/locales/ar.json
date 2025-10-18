@@ -1,0 +1,142 @@
+{
+  "accessDenied": {
+    "title": "تم رفض الوصول",
+    "message": "ليس لديك صلاحية للوصول إلى هذه الصفحة. يمكنك العودة أو تسجيل الدخول بحساب لديه الصلاحية.",
+    "goBack": "العودة",
+    "logout": "تسجيل الخروج"
+  },
+  "nav": {
+    "accounts": "الحسابات",
+    "dashboard": "لوحة التحكم",
+    "inventory": "المخزون",
+    "productionLines": "خطوط الإنتاج",
+    "employees": "الموظفون والورديات",
+    "orders": "الطلبات",
+    "qualityControl": "مراقبة الجودة",
+    "reports": "التقارير",
+    "logout": "تسجيل الخروج"
+  },
+  "auth": {
+    "Credentials": {
+      "owner": "المالك",
+      "inventoryManager": "مدير المخازن",
+      "productionManager": "مدير الإنتاج",
+      "title": "بيانات تسجيل الدخول التجريبية:"
+    },
+    "login": "تسجيل الدخول",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "welcomeBack": "مرحباً بعودتك",
+    "loginSubtitle": "أدخل بيانات الاعتماد للوصول إلى نظام إدارة المصنع"
+  },
+  "dashboard": {
+    "title": "لوحة تحكم المصنع",
+    "description": "راقب أداء مصنعك في الوقت الفعلي",
+    "dailyProduction": "الإنتاج اليومي",
+    "units": "وحدة",
+    "lineUtilization": "استخدام الخطوط",
+    "lowStock": "المواد المنخفضة",
+    "pendingOrders": "الطلبات المعلقة",
+    "productionTrend": "اتجاه الإنتاج (آخر ٧ أيام)",
+    "linePerformance": "أداء الخطوط",
+    "recentActivity": "النشاط الأخير"
+  },
+  "inventory": {
+    "title": "المخزون",
+    "description": "إدارة مخزونك ومورديك",
+    "addMaterial": "إضافة مادة",
+    "name": "الاسم",
+    "quantity": "الكمية",
+    "minStock": "الحد الأدنى",
+    "supplier": "المورد",
+    "lastUpdated": "آخر تحديث",
+    "lowStockAlert": "تنبيه مخزون منخفض",
+    "status": "الحالة",
+    "normal": "عادي",
+    "low": "مخزون منخفض"
+  },
+  "productionLines": {
+    "title": "خطوط الإنتاج",
+    "description": "مراقبة أداء خط الإنتاج وحالته",
+    "name": "اسم الخط",
+    "status": "الحالة",
+    "efficiency": "الكفاءة",
+    "capacity": "السعة",
+    "currentProduction": "الإنتاج الحالي",
+    "nextMaintenance": "الصيانة القادمة",
+    "running": "قيد التشغيل",
+    "stopped": "متوقف",
+    "maintenance": "صيانة"
+  },
+  "employees": {
+    "title": "الموظفون والورديات",
+    "description": "إدارة نوبات العمل والحضور للموظفين",
+    "addEmployee": "إضافة موظف",
+    "name": "الاسم",
+    "role": "الدور",
+    "shift": "الوردية",
+    "department": "القسم",
+    "attendance": "الحضور",
+    "present": "حاضر",
+    "absent": "غائب",
+    "morning": "صباحي",
+    "evening": "مسائي",
+    "night": "ليلي"
+  },
+  "orders": {
+    "title": "إدارة الطلبات",
+    "description": "تتبع وإدارة طلبات العملاء",
+    "addOrder": "إضافة طلب",
+    "orderNumber": "رقم الطلب",
+    "client": "العميل",
+    "quantity": "الكمية",
+    "status": "الحالة",
+    "deliveryDate": "تاريخ التسليم",
+    "priority": "الأولوية",
+    "inProgress": "قيد التنفيذ",
+    "ready": "جاهز",
+    "shipped": "تم الشحن",
+    "high": "عالية",
+    "medium": "متوسطة",
+    "low": "منخفضة"
+  },
+  "quality": {
+    "title": "مراقبة الجودة",
+    "description": "مراقبة جودة الدفعة ونتائج التفتيش",
+    "batchNumber": "رقم الدفعة",
+    "inspectionDate": "تاريخ الفحص",
+    "inspector": "المفتش",
+    "quality": "الجودة",
+    "defectRate": "معدل العيوب",
+    "notes": "ملاحظات",
+    "approved": "موافق عليه",
+    "rejected": "مرفوض",
+    "gradeA": "درجة أ",
+    "gradeB": "درجة ب"
+  },
+  "accounts": {
+    "title": "الحسابات",
+    "description": "تتبع الإيرادات والنفقات والأرباح"
+  },
+  "common": {
+    "actions": "الإجراءات",
+    "search": "بحث...",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "add": "إضافة",
+    "reset": "إعادة التعيين",
+    "close": "إغلاق",
+    "loading": "جاري التحميل...",
+    "noData": "لا توجد بيانات",
+    "theme": "المظهر",
+    "language": "اللغة",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "dark": "داكن",
+    "light": "فاتح",
+    "comingSoon": "قريباً",
+    "willBe": "ستكون متاحة هنا"
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "qc-001",
+    "batchNumber": "BATCH-2025-A-001",
+    "productionLineId": "pl-001",
+    "inspectionDate": "2025-10-01",
+    "inspectorId": "emp-002",
+    "quality": "A",
+    "defectRate": 1.2,
+    "notes": "Excellent quality, minor packaging issues",
+    "notesAr": "جودة ممتازة، مشاكل بسيطة في التعبئة",
+    "approved": true
+  },
+  {
+    "id": "qc-002",
+    "batchNumber": "BATCH-2025-B-001",
+    "productionLineId": "pl-002",
+    "inspectionDate": "2025-10-02",
+    "inspectorId": "emp-004",
+    "quality": "A",
+    "defectRate": 0.8,
+    "notes": "Perfect batch, no issues",
+    "notesAr": "دفعة مثالية، لا توجد مشاكل",
+    "approved": true
+  },
+  {
+    "id": "qc-003",
+    "batchNumber": "BATCH-2025-D-001",
+    "productionLineId": "pl-004",
+    "inspectionDate": "2025-10-02",
+    "inspectorId": "emp-002",
+    "quality": "B",
+    "defectRate": 4.5,
+    "notes": "Some color inconsistency, acceptable",
+    "notesAr": "بعض عدم الاتساق في اللون، مقبول",
+    "approved": true
+  },
+  {
+    "id": "qc-004",
+    "batchNumber": "BATCH-2025-A-002",
+    "productionLineId": "pl-001",
+    "inspectionDate": "2025-10-03",
+    "inspectorId": "emp-004",
+    "quality": "A",
+    "defectRate": 1.5,
+    "notes": "High quality, standard production",
+    "notesAr": "جودة عالية، إنتاج قياسي",
+    "approved": true
+  },
+  {
+    "id": "qc-005",
+    "batchNumber": "BATCH-2025-D-002",
+    "productionLineId": "pl-004",
+    "inspectionDate": "2025-10-03",
+    "inspectorId": "emp-002",
+    "quality": "Rejected",
+    "defectRate": 12.3,
+    "notes": "High defect rate, texture problems, needs rework",
+    "notesAr": "معدل عيوب عالي، مشاكل في القوام، يحتاج إعادة عمل",
+    "approved": false
+  },
+  {
+    "id": "qc-006",
+    "batchNumber": "BATCH-2025-B-002",
+    "productionLineId": "pl-002",
+    "inspectionDate": "2025-10-03",
+    "inspectorId": "emp-004",
+    "quality": "A",
+    "defectRate": 0.9,
+    "notes": "Excellent consistency and taste",
+    "notesAr": "اتساق وطعم ممتاز",
+    "approved": true
+  }
+]
