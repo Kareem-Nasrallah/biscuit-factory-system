@@ -136,7 +136,7 @@ const Login = () => {
               {t("auth.login")}
             </Button>
 
-            <div className="mt-4 py-4 bg-muted rounded-lg">
+            <div className="mt-4 p-4 bg-muted rounded-lg">
               <p className="text-xs text-muted-foreground text-center mb-4">
                 {t("auth.Credentials.title")}
               </p>
