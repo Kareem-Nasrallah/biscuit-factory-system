@@ -10,6 +10,8 @@ interface InputFieldProp {
   formik: FormikProps<any>;
   label: string;
   className?: string;
+  disabled?: boolean;
+  value?: any;
 }
 const InputField = ({
   id,
@@ -18,14 +20,18 @@ const InputField = ({
   formik,
   label,
   className,
+  disabled,
+  value = undefined,
 }: InputFieldProp) => {
-  const value = formik.values[name];
-  const hasValue = value !== "" && value !== null && value !== undefined;
+  const formikValue = formik.values[name];
+  const hasValue =
+    (formikValue !== "" && formikValue !== null && formikValue !== undefined) ||
+    (value !== undefined && value !== null && value !== "");
   return (
     <div className={`relative group ${className}`}>
       <Label
         htmlFor={id}
-        className={`p-1 cursor-text transition-all duration-300 text-base absolute top-2 start-3 text-slate-400 group-focus-within:-top-4 group-focus-within:text-sm group-focus-within:text-indigo-500 group-focus-within:bg-slate-900 ${
+        className={`p-1 cursor-text transition-all duration-300 text-base absolute top-2 start-3 text-slate-400 group-focus-within:-top-4 group-focus-within:text-sm group-focus-within:text-indigo-500 group-focus-within:bg-slate-900 z-10 ${
           hasValue && "-top-4 text-sm text-indigo-600 bg-slate-900"
         }`}
       >
@@ -38,9 +44,16 @@ const InputField = ({
         }`}
         type={type}
         id={id}
+        disabled={disabled}
         name={name}
         {...formik.getFieldProps(name)}
+        {...(value !== undefined ? { value } : {})}
       />
+      {formik.errors?.[name] && formik?.touched?.[name] && (
+        <p id="email-error" className="mt-2 text-sm text-red-600">
+          {formik.errors?.[name] as string}
+        </p>
+      )}
     </div>
   );
 };

@@ -2,27 +2,42 @@ import InputField from "../InputField";
 import { FormikProps } from "formik";
 import { formikEmployeesType } from "@/pages/Employees";
 import SelectField from "../SelectField";
+import { useTranslation } from "react-i18next";
 
 const EmployeesForm = ({
   formik,
 }: {
   formik: FormikProps<formikEmployeesType>;
 }) => {
-  const roleOptions = ["Owner", "Supervisor", "Worker"];
-  const shiftOptions = ["Morning", "Evening", "Night"];
-  const attendanceOptions = ["Present", "Absent"];
+  const { t } = useTranslation();
+  const tw = (key: string) => t(`employees.employeesForm.${key}`);
+
+  const roleOptions = [
+    { label: tw("roles.Owner"), value: "Owner" },
+    { label: tw("roles.Supervisor"), value: "Supervisor" },
+    { label: tw("roles.Worker"), value: "Worker" },
+  ];
+  const shiftOptions = [
+    { label: tw("shifts.Evening"), value: "Evening" },
+    { label: tw("shifts.Morning"), value: "Morning" },
+    { label: tw("shifts.Night"), value: "Night" },
+  ];
+  const attendanceOptions = [
+    { label: tw("attendanceOptions.Absent"), value: "Absent" },
+    { label: tw("attendanceOptions.Present"), value: "Present" },
+  ];
   return (
     <form className="flex flex-col gap-6 my-4">
       <InputField
         id="name"
-        label="English Name"
+        label={tw("fields.name")}
         name="name"
         type="text"
         formik={formik}
       />
       <InputField
         id="nameAr"
-        label="Arabic Name"
+        label={tw("fields.nameAr")}
         name="nameAr"
         type="text"
         formik={formik}
@@ -30,7 +45,7 @@ const EmployeesForm = ({
       <div className="flex gap-6">
         <InputField
           id="department"
-          label="Department By English"
+          label={tw("fields.department")}
           name="department"
           type="text"
           className="w-1/2"
@@ -38,7 +53,7 @@ const EmployeesForm = ({
         />
         <InputField
           id="departmentAr"
-          label="Department By Arabic"
+          label={tw("fields.departmentAr")}
           name="departmentAr"
           type="text"
           className="w-1/2"
@@ -47,35 +62,35 @@ const EmployeesForm = ({
       </div>
       <InputField
         id="phone"
-        label="Phone Number"
+        label={tw("fields.phone")}
         name="phone"
         type="text"
         formik={formik}
       />
       <InputField
         id="email"
-        label="Email"
+        label={tw("fields.email")}
         name="email"
         type="text"
         formik={formik}
       />
       <SelectField
         id="role"
-        label="Employee's Role"
+        label={tw("fields.role")}
         name="role"
         formik={formik}
         options={roleOptions}
       />
       <SelectField
         id="shift"
-        label="Employee's shift"
+        label={tw("fields.shift")}
         name="shift"
         formik={formik}
         options={shiftOptions}
       />
       <SelectField
         id="attendance"
-        label="Employee's attendance today"
+        label={tw("fields.attendance")}
         name="attendance"
         formik={formik}
         options={attendanceOptions}

@@ -28,13 +28,18 @@ const Modle = ({
 }: ModleProps) => {
   return (
     <Dialog open={open} onOpenChange={closeModle}>
-      <DialogContent>
+      <DialogContent className=" overflow-auto max-h-[80vh]">
         <DialogHeader className="flex justify-between items-center">
           <DialogTitle className="text-xl">{title}</DialogTitle>
         </DialogHeader>
         {children}
         <DialogFooter>
-          <Button type="reset" variant="destructive" onClick={resetFunc}>
+          <Button
+            type="reset"
+            className="me-2"
+            variant="destructive"
+            onClick={resetFunc}
+          >
             {t("common.reset")}
           </Button>
           <Button type="submit" onClick={saveFunc}>

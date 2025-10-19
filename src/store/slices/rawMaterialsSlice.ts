@@ -89,19 +89,21 @@ const rawMaterialsSlice = createSlice({
       }
     },
     deleteMaterial: (state, action: PayloadAction<string>) => {
+      console.log("state.materials befor", state.materials);
       state.materials = state.materials.filter((m) => m.id !== action.payload);
+      console.log("state.materials after", state.materials);
       state.deletedIds.push(action.payload);
       localStorage.setItem(
         "deletedMaterials",
         JSON.stringify(state.deletedIds)
       );
-      const newEditeds = JSON.parse(savedEdited).filter(
+      const newEditeds = JSON.parse(savedEdited)?.filter(
         (m) => !state.deletedIds.includes(m.id)
       );
       if (newEditeds) {
         localStorage.setItem("editedMaterials", JSON.stringify(newEditeds));
       }
-      const newMaterials = JSON.parse(savedNew).filter(
+      const newMaterials = JSON.parse(savedNew)?.filter(
         (m) => !state.deletedIds.includes(m.id)
       );
       if (newMaterials) {

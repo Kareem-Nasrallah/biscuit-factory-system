@@ -94,13 +94,13 @@ const employeesSlice = createSlice({
         "deletedEmployees",
         JSON.stringify(state.deletedIds)
       );
-      const newEditeds = JSON.parse(savedEdited).filter(
+      const newEditeds = JSON.parse(savedEdited)?.filter(
         (m) => !state.deletedIds.includes(m.id)
       );
       if (newEditeds) {
         localStorage.setItem("editedEmployees", JSON.stringify(newEditeds));
       }
-      const newMaterials = JSON.parse(savedNew).filter(
+      const newMaterials = JSON.parse(savedNew)?.filter(
         (m) => !state.deletedIds.includes(m.id)
       );
       if (newMaterials) {

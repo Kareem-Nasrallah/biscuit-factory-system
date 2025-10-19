@@ -1,24 +1,56 @@
 import InputField from "../InputField";
 import { FormikProps } from "formik";
 import { formikMaterialsType } from "@/pages/RawMaterials";
+import SelectField from "../SelectField";
+import { useTranslation } from "react-i18next";
 
 const MaterialForm = ({
   formik,
 }: {
   formik: FormikProps<formikMaterialsType>;
 }) => {
+  const { t } = useTranslation();
+  const tw = (key: string) => t(`inventory.materialsForm.${key}`);
+
+  const measurementUnits = [
+    "g",
+    "kg",
+    "t",
+    "lb",
+    "oz",
+
+    "L",
+    "m³",
+    "fl oz",
+    "gal",
+
+    "pcs",
+    "dz",
+    "pk",
+    "bag",
+    "box",
+
+    "m",
+    "cm",
+    "sht",
+    "rl",
+    "btl",
+    "jar",
+    "can",
+  ];
+
   return (
     <form className="flex flex-col gap-6 my-4">
       <InputField
         id="name"
-        label="English Name"
+        label={tw("name")}
         name="name"
         type="text"
         formik={formik}
       />
       <InputField
         id="nameAr"
-        label="Arabic Name"
+        label={tw("nameAr")}
         name="nameAr"
         type="text"
         formik={formik}
@@ -26,7 +58,7 @@ const MaterialForm = ({
       <div className="flex gap-6 w-full">
         <InputField
           id="quantity"
-          label="Quantity"
+          label={tw("quantity")}
           name="quantity"
           type="number"
           className="w-1/2"
@@ -34,30 +66,30 @@ const MaterialForm = ({
         />
         <InputField
           id="minStock"
-          label="Min Stock"
+          label={tw("minStock")}
           name="minStock"
           type="number"
           className="w-1/2"
           formik={formik}
         />
       </div>
-      <InputField
+      <SelectField
         id="unit"
-        label="Unit"
+        label={tw("unit")}
         name="unit"
-        type="text"
         formik={formik}
+        options={measurementUnits}
       />
       <InputField
         id="supplier"
-        label="Supplier by English"
-        name="supplier"
+        label={tw("supplier")}
+        name={"supplier"}
         type="text"
         formik={formik}
       />
       <InputField
         id="supplierAr"
-        label="Supplier by Arabic"
+        label={tw("supplierAr")}
         name="supplierAr"
         type="text"
         formik={formik}
@@ -65,7 +97,7 @@ const MaterialForm = ({
       <div className="flex gap-6 w-full">
         <InputField
           id="price"
-          label="Price"
+          label={tw("price")}
           name="price"
           type="number"
           className="w-1/2"
@@ -73,11 +105,15 @@ const MaterialForm = ({
         />
         <InputField
           id="costPerUnit"
-          label="Cost Per Unit"
+          label={tw("costPerUnit")}
           name="costPerUnit"
           type="number"
+          disabled={true}
           className="w-1/2"
           formik={formik}
+          value={
+            (formik.values.price as number) / (formik.values.quantity as number)
+          }
         />
       </div>
     </form>

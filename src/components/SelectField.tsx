@@ -10,6 +10,7 @@ import {
 } from "./ui/select";
 import { FormikProps } from "formik";
 import { Label } from "./ui/label";
+import i18next from "i18next";
 
 interface SelectFieldProp {
   id: string;
@@ -29,63 +30,72 @@ const SelectField = ({
 }: SelectFieldProp) => {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const [isFocused, setIsFocused] = useState(false);
+  const { dir, language } = i18next;
+  const isRtl = dir(language) === "rtl";
 
   const value = formik.values[name];
   const hasValue = value !== "" && value !== null && value !== undefined;
 
   return (
-    <Select
-      name={name}
-      value={value}
-      onValueChange={(value) => {
-        formik.setFieldValue(name, value);
-        setIsFocused(false);
-      }}
-      onOpenChange={(open) => {
-        setIsFocused(open);
-        if (!open) formik.setFieldTouched(name, true);
-      }}
-    >
-      <SelectGroup className="relative group">
-        <label
-          htmlFor={id}
-          onClick={() => triggerRef.current?.click()}
-          className={`p-1 transition-all duration-300 absolute start-3 ${
-            hasValue || isFocused ? "-top-4 text-sm bg-slate-900" : "top-2"
-          } ${
-            isFocused
-              ? "text-indigo-500"
-              : hasValue
-              ? "text-indigo-600"
-              : "text-slate-400"
-          }`}
-        >
-          {label}
-        </label>
-        <SelectTrigger
-          ref={triggerRef}
-          id={id}
-          className={`h-12 px-4 ${
-            isFocused ? `outline-none ring-2 ring-ring ring-offset-2` : ""
-          } ${className}`}
-        >
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent>
-          {options.map((option) =>
-            typeof option === "string" ? (
-              <SelectItem key={option} value={option}>
-                {option}
-              </SelectItem>
-            ) : (
-              <SelectItem key={option.value} value={option.value}>
-                {option.label}
-              </SelectItem>
-            )
+    <>
+      <Select
+        name={name}
+        value={value}
+        onValueChange={(value) => {
+          formik.setFieldValue(name, value);
+          setIsFocused(false);
+        }}
+        onOpenChange={(open) => {
+          setIsFocused(open);
+          if (!open) formik.setFieldTouched(name, true);
+        }}
+      >
+        <SelectGroup className="relative group">
+          <label
+            htmlFor={id}
+            onClick={() => triggerRef.current?.click()}
+            className={`p-1 transition-all duration-300 absolute start-3 ${
+              hasValue || isFocused ? "-top-4 text-sm bg-slate-900" : "top-2"
+            } ${
+              isFocused
+                ? "text-indigo-500"
+                : hasValue
+                ? "text-indigo-600"
+                : "text-slate-400"
+            }`}
+          >
+            {label}
+          </label>
+          <SelectTrigger
+            ref={triggerRef}
+            id={id}
+            className={`h-12 px-4 ${
+              isFocused ? `outline-none ring-2 ring-ring ring-offset-2` : ""
+            } ${isRtl ? "flex-row-reverse" : "flex-row"} ${className}`}
+          >
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {options.map((option) =>
+              typeof option === "string" ? (
+                <SelectItem key={option} value={option}>
+                  {option}
+                </SelectItem>
+              ) : (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              )
+            )}
+          </SelectContent>
+          {formik.errors?.[name] && formik?.touched?.[name] && (
+            <p id="email-error" className="mt-2 text-sm text-red-600">
+              {formik.errors?.[name] as string}
+            </p>
           )}
-        </SelectContent>
-      </SelectGroup>
-    </Select>
+        </SelectGroup>
+      </Select>
+    </>
   );
 };
 

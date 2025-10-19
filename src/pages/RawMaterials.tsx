@@ -33,17 +33,18 @@ import {
 } from "@/store/slices/rawMaterialsSlice";
 import useModalControl from "@/hooks/useModalControl";
 import DeleteModal from "@/components/DeleteModal";
+import { rawMaterialsSchema } from "@/validations/schemas/rawMaterialsSchema";
 
 export interface formikMaterialsType {
   name: string;
   nameAr: string;
-  quantity: null | number;
-  minStock: null | number;
+  quantity: string | number;
+  minStock: string | number;
   unit: string;
   supplier: string;
   supplierAr: string;
-  costPerUnit: null | number;
-  price: null | number;
+  costPerUnit: string | number;
+  price: string | number;
 }
 
 const RawMaterials = () => {
@@ -82,14 +83,15 @@ const RawMaterials = () => {
     initialValues: {
       name: selectedItem?.name ?? "",
       nameAr: selectedItem?.nameAr ?? "",
-      quantity: selectedItem?.quantity ?? null,
-      minStock: selectedItem?.minStock ?? null,
+      quantity: selectedItem?.quantity ?? "",
+      minStock: selectedItem?.minStock ?? "",
       unit: selectedItem?.unit ?? "",
       supplier: selectedItem?.supplier ?? "",
       supplierAr: selectedItem?.supplierAr ?? "",
-      costPerUnit: selectedItem?.costPerUnit ?? null,
-      price: selectedItem?.price ?? null,
+      costPerUnit: selectedItem?.costPerUnit ?? "",
+      price: selectedItem?.price ?? "",
     },
+    validationSchema: rawMaterialsSchema,
     enableReinitialize: true,
     onSubmit(values, formikHelpers) {
       if (operationType === "creat") {
@@ -98,13 +100,13 @@ const RawMaterials = () => {
             id: `${values.name}-${now}`,
             name: values.name,
             nameAr: values.nameAr,
-            quantity: values.quantity,
-            minStock: values.minStock,
+            quantity: values.quantity as number,
+            minStock: values.minStock as number,
             unit: values.unit,
             supplier: values.supplier,
             supplierAr: values.supplierAr,
-            costPerUnit: values.costPerUnit,
-            price: values.price,
+            price: values.price as number,
+            costPerUnit: (values.price as number) / (values.quantity as number),
             createdAt: `${now}`,
             lastUpdated: "",
           })
@@ -115,13 +117,13 @@ const RawMaterials = () => {
             id: selectedItem.id,
             name: values.name,
             nameAr: values.nameAr,
-            quantity: values.quantity,
-            minStock: values.minStock,
+            quantity: values.quantity as number,
+            minStock: values.minStock as number,
             unit: values.unit,
             supplier: values.supplier,
             supplierAr: values.supplierAr,
-            costPerUnit: values.costPerUnit,
-            price: values.price,
+            costPerUnit: values.costPerUnit as number,
+            price: values.price as number,
             createdAt: selectedItem.createdAt,
             lastUpdated: `${now}`,
           })
@@ -150,7 +152,9 @@ const RawMaterials = () => {
         open={open}
         closeModle={closeModle}
         title={
-          operationType === "creat" ? t("inventory.addMaterial") : "update"
+          operationType === "creat"
+            ? t("inventory.addMaterial")
+            : t("inventory.materialsForm.updateMaterial")
         }
         saveFunc={formik.handleSubmit}
         resetFunc={formik.resetForm}
@@ -246,10 +250,10 @@ const RawMaterials = () => {
                             : material.name}
                         </TableCell>
                         <TableCell>
-                          {material.quantity.toLocaleString()} {material.unit}
+                          {material.quantity?.toLocaleString()} {material.unit}
                         </TableCell>
                         <TableCell>
-                          {material.minStock.toLocaleString()} {material.unit}
+                          {material.minStock?.toLocaleString()} {material.unit}
                         </TableCell>
                         <TableCell>
                           {i18n.language === "ar"

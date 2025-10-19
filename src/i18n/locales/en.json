@@ -1,142 +1,197 @@
 {
   "accessDenied": {
-    "title": "Access Denied",
-    "message": "You do not have permission to access this page. Please go back or sign in with an authorized account.",
     "goBack": "Go Back",
-    "logout": "Logout"
+    "logout": "Logout",
+    "message": "You do not have permission to access this page. Please go back or sign in with an authorized account.",
+    "title": "Access Denied"
   },
-  "nav": {
-    "accounts": "Accounts",
-    "dashboard": "Dashboard",
-    "inventory": "Inventory",
-    "productionLines": "Production Lines",
-    "employees": "Employees & Shifts",
-    "orders": "Orders",
-    "qualityControl": "Quality Control",
-    "reports": "Reports",
-    "logout": "Logout"
+  "accounts": {
+    "description": "Income, Expenses, and Profit tracking",
+    "title": "Accounts"
   },
   "auth": {
     "Credentials": {
-      "owner": "Owner",
       "inventoryManager": "Inventory Manager",
+      "owner": "Owner",
       "productionManager": "Production Manager",
       "title": "Demo Credentials:"
     },
     "login": "Login",
-    "username": "Username",
+    "loginSubtitle": "Enter your credentials to access the factory management system",
     "password": "Password",
-    "welcomeBack": "Welcome Back",
-    "loginSubtitle": "Enter your credentials to access the factory management system"
+    "username": "Username",
+    "welcomeBack": "Welcome Back"
+  },
+  "common": {
+    "actions": "Actions",
+    "add": "Add",
+    "arabic": "Arabic",
+    "cancel": "Cancel",
+    "close": "Close",
+    "comingSoon": "Coming Soon",
+    "dark": "Dark",
+    "delete": "Delete",
+    "edit": "Edit",
+    "english": "English",
+    "language": "Language",
+    "light": "Light",
+    "loading": "Loading...",
+    "noData": "No data available",
+    "reset": "Reset",
+    "save": "Save",
+    "search": "Search...",
+    "theme": "Theme",
+    "willBe": "will be available here"
   },
   "dashboard": {
-    "title": "Factory Dashboard",
-    "description": "Monitor your factory's real-time performance",
     "dailyProduction": "Daily Production",
-    "units": "units",
+    "description": "Monitor your factory's real-time performance",
+    "linePerformance": "Line Performance",
     "lineUtilization": "Line Utilization",
     "lowStock": "Low Stock Items",
     "pendingOrders": "Pending Orders",
     "productionTrend": "Production Trend (Last 7 Days)",
-    "linePerformance": "Line Performance",
-    "recentActivity": "Recent Activity"
-  },
-  "inventory": {
-    "title": "Inventory",
-    "description": "Manage your inventory and suppliers",
-    "addMaterial": "Add Material",
-    "name": "Name",
-    "quantity": "Quantity",
-    "minStock": "Min Stock",
-    "supplier": "Supplier",
-    "lastUpdated": "Last Updated",
-    "lowStockAlert": "Low Stock Alert",
-    "status": "Status",
-    "normal": "Normal",
-    "low": "Low Stock"
-  },
-  "productionLines": {
-    "title": "Production Lines",
-    "description": "Monitor production line performance and status",
-    "name": "Line Name",
-    "status": "Status",
-    "efficiency": "Efficiency",
-    "capacity": "Capacity",
-    "currentProduction": "Current Production",
-    "nextMaintenance": "Next Maintenance",
-    "running": "Running",
-    "stopped": "Stopped",
-    "maintenance": "Maintenance"
+    "recentActivity": "Recent Activity",
+    "title": "Factory Dashboard",
+    "units": "units"
   },
   "employees": {
-    "title": "Employees & Shifts",
-    "description": "Manage employee shifts and attendance",
+    "absent": "Absent",
     "addEmployee": "Add Employee",
+    "attendance": "Attendance",
+    "department": "Department",
+    "description": "Manage employee shifts and attendance",
+    "employeesForm": {
+      "attendanceOptions": {
+        "Absent": "Absent",
+        "Present": "Present"
+      },
+      "fields": {
+        "attendance": "Attendance",
+        "department": "Department (English)",
+        "departmentAr": "Department (Arabic)",
+        "email": "Email Address",
+        "name": "Name (English)",
+        "nameAr": "Name (Arabic)",
+        "phone": "Phone Number",
+        "role": "Role",
+        "shift": "Shift"
+      },
+      "roles": {
+        "Owner": "Owner",
+        "Supervisor": "Supervisor",
+        "Worker": "Worker"
+      },
+      "shifts": {
+        "Evening": "Evening",
+        "Morning": "Morning",
+        "Night": "Night"
+      }
+    },
+    "evening": "Evening",
+    "morning": "Morning",
     "name": "Name",
+    "night": "Night",
+    "present": "Present",
     "role": "Role",
     "shift": "Shift",
-    "department": "Department",
-    "attendance": "Attendance",
-    "present": "Present",
-    "absent": "Absent",
-    "morning": "Morning",
-    "evening": "Evening",
-    "night": "Night"
+    "title": "Employees & Shifts"
   },
-  "orders": {
-    "title": "Orders Management",
-    "description": "Track and manage customer orders",
-    "addOrder": "Add Order",
-    "orderNumber": "Order Number",
-    "client": "Client",
+  "inventory": {
+    "addMaterial": "Add Material",
+    "description": "Manage your inventory and suppliers",
+    "lastUpdated": "Last Updated",
+    "low": "Low Stock",
+    "lowStockAlert": "Low Stock Alert",
+    "materialsForm": {
+      "costPerUnit": "Cost per Unit",
+      "minStock": "Minimum Stock",
+      "name": "Material Name",
+      "nameAr": "Material Name (Arabic)",
+      "price": "Total Price",
+      "quantity": "Quantity",
+      "supplier": "Supplier",
+      "supplierAr": "Supplier (Arabic)",
+      "title": "Raw Material Details",
+      "unit": "Unit",
+      "updateMaterial": "Update Material"
+    },
+    "minStock": "Min Stock",
+    "name": "Name",
+    "normal": "Normal",
     "quantity": "Quantity",
     "status": "Status",
+    "supplier": "Supplier",
+    "title": "Inventory"
+  },
+  "nav": {
+    "accounts": "Accounts",
+    "dashboard": "Dashboard",
+    "employees": "Employees & Shifts",
+    "inventory": "Inventory",
+    "logout": "Logout",
+    "orders": "Orders",
+    "productionLines": "Production Lines",
+    "qualityControl": "Quality Control",
+    "reports": "Reports"
+  },
+  "orders": {
+    "addOrder": "Add Order",
+    "client": "Client",
     "deliveryDate": "Delivery Date",
-    "priority": "Priority",
+    "description": "Track and manage customer orders",
+    "high": "High",
     "inProgress": "In Progress",
+    "low": "Low",
+    "medium": "Medium",
+    "orderNumber": "Order Number",
+    "priority": "Priority",
+    "quantity": "Quantity",
     "ready": "Ready",
     "shipped": "Shipped",
-    "high": "High",
-    "medium": "Medium",
-    "low": "Low"
+    "status": "Status",
+    "title": "Orders Management"
+  },
+  "productionLines": {
+    "capacity": "Capacity",
+    "currentProduction": "Current Production",
+    "description": "Monitor production line performance and status",
+    "efficiency": "Efficiency",
+    "maintenance": "Maintenance",
+    "name": "Line Name",
+    "nextMaintenance": "Next Maintenance",
+    "running": "Running",
+    "status": "Status",
+    "stopped": "Stopped",
+    "title": "Production Lines"
   },
   "quality": {
-    "title": "Quality Control",
-    "description": "Monitor batch quality and inspection results",
+    "approved": "Approved",
     "batchNumber": "Batch Number",
+    "defectRate": "Defect Rate",
+    "description": "Monitor batch quality and inspection results",
+    "gradeA": "Grade A",
+    "gradeB": "Grade B",
     "inspectionDate": "Inspection Date",
     "inspector": "Inspector",
-    "quality": "Quality",
-    "defectRate": "Defect Rate",
     "notes": "Notes",
-    "approved": "Approved",
+    "quality": "Quality",
     "rejected": "Rejected",
-    "gradeA": "Grade A",
-    "gradeB": "Grade B"
+    "title": "Quality Control"
   },
-  "accounts": {
-    "title": "Accounts",
-    "description": "Income, Expenses, and Profit tracking"
-  },
-  "common": {
-    "actions": "Actions",
-    "search": "Search...",
-    "edit": "Edit",
-    "delete": "Delete",
-    "save": "Save",
-    "cancel": "Cancel",
-    "add": "Add",
-    "reset": "Reset",
-    "close": "Close",
-    "loading": "Loading...",
-    "noData": "No data available",
-    "theme": "Theme",
-    "language": "Language",
-    "english": "English",
-    "arabic": "Arabic",
-    "dark": "Dark",
-    "light": "Light",
-    "comingSoon": "Coming Soon",
-    "willBe": "will be available here"
+  "validation": {
+    "email": "Please enter a valid email address",
+    "greater_than": "{{x}} must be greater than {{y}}",
+    "integer": "Value must be an integer",
+    "invalid": "Invalid value",
+    "less_than": "{{x}} must be less than {{y}}",
+    "max": "The number must be less than {{max}}",
+    "maxLength": "Maximum length is {{max}} characters",
+    "min": "The number must be greater than {{min}}",
+    "minLength": "Minimum length is {{min}} characters",
+    "positive": "Value must be positive",
+    "required": "This field is required",
+    "too_long": "Too long",
+    "too_short": "Too short"
   }
 }

@@ -25,8 +25,8 @@ const DeleteModal = ({ open, closeModle, title, saveFunc }: ModleProps) => {
         </DialogHeader>
         are you sure you want to delete this Item
         <DialogFooter>
-          <Button onClick={closeModle}>{t("common.cancel")}</Button>
-          <Button type="submit" onClick={saveFunc}>
+          <Button onClick={closeModle} className="me-2">{t("common.cancel")}</Button>
+          <Button type="submit" onClick={saveFunc} variant="destructive">
             {t("common.delete")}
           </Button>
         </DialogFooter>

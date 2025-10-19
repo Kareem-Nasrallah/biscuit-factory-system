@@ -28,6 +28,7 @@ import {
 import EmployeesForm from "@/components/forms/EmployeesForm";
 import { useFormik } from "formik";
 import DeleteModal from "@/components/DeleteModal";
+import { employeesSchema } from "../validations/schemas/employeesSchema";
 
 export interface formikEmployeesType {
   name: string;
@@ -86,6 +87,7 @@ const Employees = () => {
       email: selectedItem?.email ?? "",
       attendance: (selectedItem?.attendance ?? "") as "Present" | "Absent",
     },
+    validationSchema: employeesSchema,
     enableReinitialize: true,
     onSubmit: (values, formikHelpers) => {
       if (operationType === "creat") {

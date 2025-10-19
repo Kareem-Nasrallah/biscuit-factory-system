@@ -1,142 +1,197 @@
 {
   "accessDenied": {
-    "title": "تم رفض الوصول",
-    "message": "ليس لديك صلاحية للوصول إلى هذه الصفحة. يمكنك العودة أو تسجيل الدخول بحساب لديه الصلاحية.",
     "goBack": "العودة",
-    "logout": "تسجيل الخروج"
+    "logout": "تسجيل الخروج",
+    "message": "ليس لديك صلاحية للوصول إلى هذه الصفحة. يمكنك العودة أو تسجيل الدخول بحساب لديه الصلاحية.",
+    "title": "تم رفض الوصول"
   },
-  "nav": {
-    "accounts": "الحسابات",
-    "dashboard": "لوحة التحكم",
-    "inventory": "المخزون",
-    "productionLines": "خطوط الإنتاج",
-    "employees": "الموظفون والورديات",
-    "orders": "الطلبات",
-    "qualityControl": "مراقبة الجودة",
-    "reports": "التقارير",
-    "logout": "تسجيل الخروج"
+  "accounts": {
+    "description": "تتبع الإيرادات والنفقات والأرباح",
+    "title": "الحسابات"
   },
   "auth": {
     "Credentials": {
-      "owner": "المالك",
       "inventoryManager": "مدير المخازن",
+      "owner": "المالك",
       "productionManager": "مدير الإنتاج",
       "title": "بيانات تسجيل الدخول التجريبية:"
     },
     "login": "تسجيل الدخول",
-    "username": "اسم المستخدم",
+    "loginSubtitle": "أدخل بيانات الاعتماد للوصول إلى نظام إدارة المصنع",
     "password": "كلمة المرور",
-    "welcomeBack": "مرحباً بعودتك",
-    "loginSubtitle": "أدخل بيانات الاعتماد للوصول إلى نظام إدارة المصنع"
+    "username": "اسم المستخدم",
+    "welcomeBack": "مرحباً بعودتك"
+  },
+  "common": {
+    "actions": "الإجراءات",
+    "add": "إضافة",
+    "arabic": "العربية",
+    "cancel": "إلغاء",
+    "close": "إغلاق",
+    "comingSoon": "قريباً",
+    "dark": "داكن",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "english": "الإنجليزية",
+    "language": "اللغة",
+    "light": "فاتح",
+    "loading": "جاري التحميل...",
+    "noData": "لا توجد بيانات",
+    "reset": "إعادة التعيين",
+    "save": "حفظ",
+    "search": "بحث...",
+    "theme": "المظهر",
+    "willBe": "ستكون متاحة هنا"
   },
   "dashboard": {
-    "title": "لوحة تحكم المصنع",
-    "description": "راقب أداء مصنعك في الوقت الفعلي",
     "dailyProduction": "الإنتاج اليومي",
-    "units": "وحدة",
+    "description": "راقب أداء مصنعك في الوقت الفعلي",
+    "linePerformance": "أداء الخطوط",
     "lineUtilization": "استخدام الخطوط",
     "lowStock": "المواد المنخفضة",
     "pendingOrders": "الطلبات المعلقة",
     "productionTrend": "اتجاه الإنتاج (آخر ٧ أيام)",
-    "linePerformance": "أداء الخطوط",
-    "recentActivity": "النشاط الأخير"
-  },
-  "inventory": {
-    "title": "المخزون",
-    "description": "إدارة مخزونك ومورديك",
-    "addMaterial": "إضافة مادة",
-    "name": "الاسم",
-    "quantity": "الكمية",
-    "minStock": "الحد الأدنى",
-    "supplier": "المورد",
-    "lastUpdated": "آخر تحديث",
-    "lowStockAlert": "تنبيه مخزون منخفض",
-    "status": "الحالة",
-    "normal": "عادي",
-    "low": "مخزون منخفض"
-  },
-  "productionLines": {
-    "title": "خطوط الإنتاج",
-    "description": "مراقبة أداء خط الإنتاج وحالته",
-    "name": "اسم الخط",
-    "status": "الحالة",
-    "efficiency": "الكفاءة",
-    "capacity": "السعة",
-    "currentProduction": "الإنتاج الحالي",
-    "nextMaintenance": "الصيانة القادمة",
-    "running": "قيد التشغيل",
-    "stopped": "متوقف",
-    "maintenance": "صيانة"
+    "recentActivity": "النشاط الأخير",
+    "title": "لوحة تحكم المصنع",
+    "units": "وحدة"
   },
   "employees": {
-    "title": "الموظفون والورديات",
-    "description": "إدارة نوبات العمل والحضور للموظفين",
+    "absent": "غائب",
     "addEmployee": "إضافة موظف",
+    "attendance": "الحضور",
+    "department": "القسم",
+    "description": "إدارة نوبات العمل والحضور للموظفين",
+    "employeesForm": {
+      "attendanceOptions": {
+        "Absent": "غائب",
+        "Present": "حاضر"
+      },
+      "fields": {
+        "attendance": "الحضور",
+        "department": "القسم (بالإنجليزية)",
+        "departmentAr": "القسم (بالعربية)",
+        "email": "البريد الإلكتروني",
+        "name": "الاسم (بالإنجليزية)",
+        "nameAr": "الاسم (بالعربية)",
+        "phone": "رقم الهاتف",
+        "role": "الوظيفة",
+        "shift": "الوردية"
+      },
+      "roles": {
+        "Owner": "المالك",
+        "Supervisor": "مشرف",
+        "Worker": "عامل"
+      },
+      "shifts": {
+        "Evening": "مسائية",
+        "Morning": "صباحية",
+        "Night": "ليلية"
+      }
+    },
+    "evening": "مسائي",
+    "morning": "صباحي",
     "name": "الاسم",
+    "night": "ليلي",
+    "present": "حاضر",
     "role": "الدور",
     "shift": "الوردية",
-    "department": "القسم",
-    "attendance": "الحضور",
-    "present": "حاضر",
-    "absent": "غائب",
-    "morning": "صباحي",
-    "evening": "مسائي",
-    "night": "ليلي"
+    "title": "الموظفون والورديات"
   },
-  "orders": {
-    "title": "إدارة الطلبات",
-    "description": "تتبع وإدارة طلبات العملاء",
-    "addOrder": "إضافة طلب",
-    "orderNumber": "رقم الطلب",
-    "client": "العميل",
+  "inventory": {
+    "addMaterial": "إضافة مادة",
+    "description": "إدارة مخزونك ومورديك",
+    "lastUpdated": "آخر تحديث",
+    "low": "مخزون منخفض",
+    "lowStockAlert": "تنبيه مخزون منخفض",
+    "materialsForm": {
+      "costPerUnit": "التكلفة لكل وحدة",
+      "minStock": "الحد الأدنى للمخزون",
+      "name": "اسم المادة",
+      "nameAr": "اسم المادة (بالعربية)",
+      "price": "السعر الإجمالي",
+      "quantity": "الكمية",
+      "supplier": "المورد",
+      "supplierAr": "المورد (بالعربية)",
+      "title": "بيانات المادة الخام",
+      "unit": "الوحدة",
+      "updateMaterial": "تعديل المادة"
+    },
+    "minStock": "الحد الأدنى",
+    "name": "الاسم",
+    "normal": "عادي",
     "quantity": "الكمية",
     "status": "الحالة",
+    "supplier": "المورد",
+    "title": "المخزون"
+  },
+  "nav": {
+    "accounts": "الحسابات",
+    "dashboard": "لوحة التحكم",
+    "employees": "الموظفون والورديات",
+    "inventory": "المخزون",
+    "logout": "تسجيل الخروج",
+    "orders": "الطلبات",
+    "productionLines": "خطوط الإنتاج",
+    "qualityControl": "مراقبة الجودة",
+    "reports": "التقارير"
+  },
+  "orders": {
+    "addOrder": "إضافة طلب",
+    "client": "العميل",
     "deliveryDate": "تاريخ التسليم",
-    "priority": "الأولوية",
+    "description": "تتبع وإدارة طلبات العملاء",
+    "high": "عالية",
     "inProgress": "قيد التنفيذ",
+    "low": "منخفضة",
+    "medium": "متوسطة",
+    "orderNumber": "رقم الطلب",
+    "priority": "الأولوية",
+    "quantity": "الكمية",
     "ready": "جاهز",
     "shipped": "تم الشحن",
-    "high": "عالية",
-    "medium": "متوسطة",
-    "low": "منخفضة"
+    "status": "الحالة",
+    "title": "إدارة الطلبات"
+  },
+  "productionLines": {
+    "capacity": "السعة",
+    "currentProduction": "الإنتاج الحالي",
+    "description": "مراقبة أداء خط الإنتاج وحالته",
+    "efficiency": "الكفاءة",
+    "maintenance": "صيانة",
+    "name": "اسم الخط",
+    "nextMaintenance": "الصيانة القادمة",
+    "running": "قيد التشغيل",
+    "status": "الحالة",
+    "stopped": "متوقف",
+    "title": "خطوط الإنتاج"
   },
   "quality": {
-    "title": "مراقبة الجودة",
-    "description": "مراقبة جودة الدفعة ونتائج التفتيش",
+    "approved": "موافق عليه",
     "batchNumber": "رقم الدفعة",
+    "defectRate": "معدل العيوب",
+    "description": "مراقبة جودة الدفعة ونتائج التفتيش",
+    "gradeA": "درجة أ",
+    "gradeB": "درجة ب",
     "inspectionDate": "تاريخ الفحص",
     "inspector": "المفتش",
-    "quality": "الجودة",
-    "defectRate": "معدل العيوب",
     "notes": "ملاحظات",
-    "approved": "موافق عليه",
+    "quality": "الجودة",
     "rejected": "مرفوض",
-    "gradeA": "درجة أ",
-    "gradeB": "درجة ب"
+    "title": "مراقبة الجودة"
   },
-  "accounts": {
-    "title": "الحسابات",
-    "description": "تتبع الإيرادات والنفقات والأرباح"
-  },
-  "common": {
-    "actions": "الإجراءات",
-    "search": "بحث...",
-    "edit": "تعديل",
-    "delete": "حذف",
-    "save": "حفظ",
-    "cancel": "إلغاء",
-    "add": "إضافة",
-    "reset": "إعادة التعيين",
-    "close": "إغلاق",
-    "loading": "جاري التحميل...",
-    "noData": "لا توجد بيانات",
-    "theme": "المظهر",
-    "language": "اللغة",
-    "english": "الإنجليزية",
-    "arabic": "العربية",
-    "dark": "داكن",
-    "light": "فاتح",
-    "comingSoon": "قريباً",
-    "willBe": "ستكون متاحة هنا"
+  "validation": {
+    "email": "يرجى إدخال بريد إلكتروني صحيح",
+    "greater_than": "يجب أن يكون {{x}} أكبر من {{y}}",
+    "integer": "يجب أن تكون القيمة عددًا صحيحًا",
+    "invalid": "قيمة غير صحيحة",
+    "less_than": "يجب أن يكون {{x}} أقل من {{y}}",
+    "max": "يجب أن يكون الرقم أكبر من {{max}}",
+    "maxLength": "الحد الأقصى هو {{max}} حروف",
+    "min": "يجب أن يكون الرقم أكبر من {{min}}",
+    "minLength": "الحد الأدنى هو {{min}} حروف",
+    "positive": "يجب أن تكون القيمة موجبة",
+    "required": "هذا الحقل مطلوب",
+    "too_long": "طويل جدًا",
+    "too_short": "قصير جدًا"
   }
 }
