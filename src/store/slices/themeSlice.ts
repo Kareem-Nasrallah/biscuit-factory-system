@@ -1,27 +1,30 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 interface ThemeState {
-  mode: 'light' | 'dark';
+  mode: "light" | "dark";
 }
 
-const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
+const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+
 const initialState: ThemeState = {
-  mode: savedTheme || 'light',
+  mode:
+    savedTheme ||
+    (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"),
 };
 
 const themeSlice = createSlice({
-  name: 'theme',
+  name: "theme",
   initialState,
   reducers: {
     toggleTheme: (state) => {
-      state.mode = state.mode === 'light' ? 'dark' : 'light';
-      localStorage.setItem('theme', state.mode);
-      document.documentElement.classList.toggle('dark', state.mode === 'dark');
+      state.mode = state.mode === "light" ? "dark" : "light";
+      localStorage.setItem("theme", state.mode);
+      document.documentElement.classList.toggle("dark", state.mode === "dark");
     },
     setTheme: (state, action) => {
       state.mode = action.payload;
-      localStorage.setItem('theme', state.mode);
-      document.documentElement.classList.toggle('dark', state.mode === 'dark');
+      localStorage.setItem("theme", state.mode);
+      document.documentElement.classList.toggle("dark", state.mode === "dark");
     },
   },
 });
