@@ -9,25 +9,25 @@ import {
 import { Button } from "./ui/button";
 import { t } from "i18next";
 
-interface ModleProps {
+interface ModalProps {
   open: boolean;
-  closeModle: () => void;
+  closeModal: () => void;
   title: string;
   saveFunc: () => void;
   resetFunc: () => void;
   children: React.ReactNode;
 }
 
-const Modle = ({
+const Modal = ({
   open,
-  closeModle,
+  closeModal,
   title,
   saveFunc,
   resetFunc,
   children,
-}: ModleProps) => {
+}: ModalProps) => {
   return (
-    <Dialog open={open} onOpenChange={closeModle}>
+    <Dialog open={open} onOpenChange={closeModal}>
       <DialogContent className=" overflow-auto max-h-[80vh]">
         <DialogHeader className="flex justify-between items-center">
           <DialogTitle className="text-xl">{title}</DialogTitle>
@@ -51,4 +51,4 @@ const Modle = ({
   );
 };
 
-export default Modle;
+export default Modal;

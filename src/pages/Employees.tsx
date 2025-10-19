@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/table";
 import { Search, Plus, UserCheck, UserX, Edit, Trash2 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Modle from "@/components/Modal";
+import Modal from "@/components/Modal";
 import useModalControl from "@/hooks/useModalControl";
 import {
   addEmployee,
@@ -64,7 +64,7 @@ const Employees = () => {
     selectedItem,
     setOpen,
     setSelectedItem,
-    closeModle,
+    closeModal,
     openDeleteModal,
     setopenDeleteModal,
   } = useModalControl<Employee>();
@@ -232,13 +232,16 @@ const Employees = () => {
     <DashboardLayout>
       <DeleteModal
         open={openDeleteModal}
-        closeModle={() => setopenDeleteModal(false)}
+        closeModal={() => setopenDeleteModal(false)}
         title="Delete"
         saveFunc={deleteEmployeeFun}
       />
-      <Modle
+      <Modal
         open={open}
-        closeModle={closeModle}
+        closeModal={() => {
+          closeModal();
+          formik.setErrors({});
+        }}
         title={
           operationType === "creat" ? t("employees.addEmployee") : "update"
         }
@@ -246,7 +249,7 @@ const Employees = () => {
         resetFunc={formik.resetForm}
       >
         <EmployeesForm formik={formik} />
-      </Modle>
+      </Modal>
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div>

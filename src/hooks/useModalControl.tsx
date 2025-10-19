@@ -5,7 +5,7 @@ function useModalControl<itemType>() {
   const [openDeleteModal, setopenDeleteModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState<itemType | null>(null);
 
-  const closeModle = () => {
+  const closeModal = () => {
     setSelectedItem(null);
     setOpen(false);
   };
@@ -16,7 +16,7 @@ function useModalControl<itemType>() {
     setopenDeleteModal,
     selectedItem,
     setSelectedItem,
-    closeModle,
+    closeModal,
   };
 }
 

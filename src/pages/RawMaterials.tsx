@@ -22,7 +22,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Search, Plus, Edit, Trash2, AlertTriangle } from "lucide-react";
-import Modle from "@/components/Modal";
+import Modal from "@/components/Modal";
 import MaterialForm from "@/components/forms/MaterialForm";
 import { useFormik } from "formik";
 import {
@@ -57,7 +57,7 @@ const RawMaterials = () => {
     selectedItem,
     setOpen,
     setSelectedItem,
-    closeModle,
+    closeModal,
     openDeleteModal,
     setopenDeleteModal,
   } = useModalControl<RawMaterial>();
@@ -144,13 +144,16 @@ const RawMaterials = () => {
     <DashboardLayout>
       <DeleteModal
         open={openDeleteModal}
-        closeModle={() => setopenDeleteModal(false)}
+        closeModal={() => setopenDeleteModal(false)}
         title="Delete"
         saveFunc={DeleteMaterial}
       />
-      <Modle
+      <Modal
         open={open}
-        closeModle={closeModle}
+        closeModal={() => {
+          closeModal();
+          formik.setErrors({});
+        }}
         title={
           operationType === "creat"
             ? t("inventory.addMaterial")
@@ -160,7 +163,7 @@ const RawMaterials = () => {
         resetFunc={formik.resetForm}
       >
         <MaterialForm formik={formik} />
-      </Modle>
+      </Modal>
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div>
