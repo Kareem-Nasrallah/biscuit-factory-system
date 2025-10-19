@@ -55,7 +55,7 @@ const SelectField = ({
             htmlFor={id}
             onClick={() => triggerRef.current?.click()}
             className={`p-1 transition-all duration-300 absolute start-3 ${
-              hasValue || isFocused ? "-top-4 text-sm bg-slate-900" : "top-2"
+              hasValue || isFocused ? "-top-4 text-sm bg-background" : "top-2"
             } ${
               isFocused
                 ? "text-indigo-500"

@@ -31,8 +31,8 @@ const InputField = ({
     <div className={`relative group ${className}`}>
       <Label
         htmlFor={id}
-        className={`p-1 cursor-text transition-all duration-300 text-base absolute top-2 start-3 text-slate-400 group-focus-within:-top-4 group-focus-within:text-sm group-focus-within:text-indigo-500 group-focus-within:bg-slate-900 z-10 ${
-          hasValue && "-top-4 text-sm text-indigo-600 bg-slate-900"
+        className={`p-1 cursor-text transition-all duration-300 text-base absolute top-2 start-3 text-slate-400 group-focus-within:-top-4 group-focus-within:text-sm group-focus-within:text-indigo-500 group-focus-within:bg-background z-10 ${
+          hasValue && "-top-4 text-sm text-indigo-600 bg-background"
         }`}
       >
         {label}
