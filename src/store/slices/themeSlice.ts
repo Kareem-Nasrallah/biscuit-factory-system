@@ -8,7 +8,7 @@ const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
 
 const initialState: ThemeState = {
   mode:
-    savedTheme ||
+    savedTheme ??
     (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"),
 };
 
