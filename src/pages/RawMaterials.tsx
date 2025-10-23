@@ -165,7 +165,7 @@ const RawMaterials = () => {
         <MaterialForm formik={formik} />
       </Modal>
       <div className="space-y-6">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col xs:flex-row gap-4 items-start xs:items-center justify-between">
           <div>
             <h1 className="text-4xl font-bold mb-2">{t("inventory.title")}</h1>
             <p className="text-muted-foreground">
@@ -173,7 +173,7 @@ const RawMaterials = () => {
             </p>
           </div>
           <Button
-            className="gap-2"
+            className="gap-2 w-full xs:w-auto"
             onClick={() => {
               setSelectedItem(null);
               setOpen(true);

@@ -44,14 +44,14 @@ const Orders = () => {
           <p className="text-muted-foreground">{t('orders.description')}</p>
         </div>
 
-        <div className="grid gap-4">
+        <div className="grid gap-4 lg:grid-cols-2 2xl:grid-cols-3">
           {orders.map((order) => (
             <Card key={order.id} className="overflow-hidden">
               <CardContent className="p-6">
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex items-start justify-between gap-2 mb-4 flex-wrap">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <h3 className="text-xl font-bold">{order.orderNumber}</h3>
+                      <h3 className="text-xl font-bold whitespace-nowrap">{order.orderNumber}</h3>
                       <Badge variant="outline" className={getPriorityColor(order.priority)}>
                         {t(`orders.${order.priority.toLowerCase()}`)} Priority
                       </Badge>
@@ -65,7 +65,7 @@ const Orders = () => {
                   </Badge>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-3">
+                <div className="flex justify-between flex-wrap gap-4">
                   <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
                     <Package className="h-5 w-5 text-primary" />
                     <div>

@@ -136,36 +136,31 @@ const Login = () => {
               {t("auth.login")}
             </Button>
 
-            <div className="mt-4 p-4 bg-muted rounded-lg">
+            <div className="mt-4 p-2 bg-muted rounded-lg">
               <p className="text-xs text-muted-foreground text-center mb-4">
                 {t("auth.Credentials.title")}
               </p>
-              <div className="space-y-1 text-xs m-auto flex justify-between gap-4">
-                <div className="flex flex-col justify-between">
-                  <strong className="inline-block m-auto">
-                    {t("auth.Credentials.owner")}
-                  </strong>
-                  <p className="text-center mt-3">
-                    owner<span className="mb-1 block"></span>owner123
-                  </p>
+              <div className="space-y-1 text-xs flex flex-col items-start gap-4">
+                <div className="flex justify-start gap-12 2xs:gap-16">
+                  <strong className="whitespace-nowrap w-20 mt-2 xs:mt-0 me-2 text-satrt">{t("auth.Credentials.owner")} :</strong>
+                  <div className="flex flex-col xs:flex-row gap-1 xs:gap-8">
+                    <span className="xs:me-14">owner</span>
+                    <span>owner123</span>
+                  </div>
                 </div>
-                <div className="flex flex-col justify-between">
-                  <strong className="inline-block m-auto">
-                    {t("auth.Credentials.productionManager")}
-                  </strong>
-                  <p className="text-center mt-3">
-                    production_manager<span className="mb-1 block"></span>
-                    productionManager123
-                  </p>
+                <div className="flex justify-start gap-4 2xs:gap-8">
+                  <strong className="whitespace-nowrap mt-2 xs:mt-0">{t("auth.Credentials.productionManager")} :</strong>
+                  <div className="flex flex-col xs:flex-row gap-1 xs:gap-8">
+                    <span>production_mgr</span>
+                    <span>productionMgr123</span>
+                  </div>
                 </div>
-                <div className="flex flex-col justify-between">
-                  <strong className="inline-block m-auto">
-                    {t("auth.Credentials.inventoryManager")}
-                  </strong>
-                  <p className="text-center mt-3">
-                    inventory_manager<span className="mb-1 block"></span>
-                    inventoryManager123
-                  </p>
+                <div className="flex justify-start gap-6 2xs:gap-10">
+                  <strong className="whitespace-nowrap mt-2 xs:mt-0">{t("auth.Credentials.inventoryManager")} :</strong>
+                  <div className="flex flex-col xs:flex-row gap-1 xs:gap-8">
+                    <span className="xs:me-2">inventory_mgr</span>
+                    <span>inventoryMgr123</span>
+                  </div>
                 </div>
               </div>
             </div>

@@ -13,7 +13,10 @@
     "Credentials": {
       "inventoryManager": "مدير المخازن",
       "owner": "المالك",
+      "password": "كلمة المرور",
       "productionManager": "مدير الإنتاج",
+      "username": "اسم المستخدم",
+      "role": "الوظيفة",
       "title": "بيانات تسجيل الدخول التجريبية:"
     },
     "login": "تسجيل الدخول",

@@ -35,7 +35,7 @@ export const Sidebar = ({ isCollapsed, setIsCollapsed }: SidebarProp) => {
       path: "/dashboard",
       icon: LayoutDashboard,
       label: t("nav.dashboard"),
-      roles: ["Owner", ],
+      roles: ["Owner"],
     },
     {
       path: "/inventory",
@@ -53,7 +53,7 @@ export const Sidebar = ({ isCollapsed, setIsCollapsed }: SidebarProp) => {
       path: "/employees",
       icon: Users,
       label: t("nav.employees"),
-      roles: ["Owner", ],
+      roles: ["Owner"],
     },
     {
       path: "/orders",
@@ -71,13 +71,13 @@ export const Sidebar = ({ isCollapsed, setIsCollapsed }: SidebarProp) => {
       path: "/accounts",
       icon: FileText,
       label: t("nav.accounts"),
-      roles: ["Owner", ],
+      roles: ["Owner"],
     },
     {
       path: "/reports",
       icon: FileText,
       label: t("nav.reports"),
-      roles: ["Owner", ],
+      roles: ["Owner"],
     },
   ];
 
@@ -91,71 +91,81 @@ export const Sidebar = ({ isCollapsed, setIsCollapsed }: SidebarProp) => {
   );
 
   return (
-    <aside
-      className={cn(
-        "fixed start-0 top-0 z-40 h-screen border-r bg-card transition-all duration-300",
-        isCollapsed ? "w-16" : "w-64"
-      )}
-    >
-      <div className="flex h-full flex-col">
-        {/* Header */}
-        <div className="flex h-16 items-center justify-between border-b px-4">
-          {!isCollapsed && (
-            <h1 className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Biscuit Factory
-            </h1>
-          )}
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            aria-label="Toggle sidebar"
-          >
-            <Menu className="h-5 w-5" />
-          </Button>
-        </div>
+    <>
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={() => {
+          setIsCollapsed(!isCollapsed);
+        }}
+        aria-label="Toggle sidebar"
+        className={`fixed transition-all z-50 top-3 bg-secondary/60 ${
+          isCollapsed ? "start-0 xs:start-3 ms-0" : "start-44 ms-2"
+        }`}
+      >
+        <Menu className="h-5 w-5" />
+      </Button>
 
-        {/* Navigation */}
-        <nav className="flex-1 space-y-1 p-4 overflow-y-auto">
-          {filteredNavItems.map((item) => {
-            item.path === "/";
-            return (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                className={({ isActive }) =>
-                  cn(
-                    "flex items-center gap-3 rounded-lg px-3 py-2 transition-colors",
-                    isActive
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
-                    isCollapsed && "justify-center"
-                  )
-                }
-              >
-                <item.icon className="h-5 w-5 shrink-0" />
-                {!isCollapsed && <span>{item.label}</span>}
-              </NavLink>
-            );
-          })}
-        </nav>
-
-        {/* Footer */}
-        <div className="border-t p-4">
-          <div className="flex items-center gap-2 mb-3">
-            <ThemeToggle />
-            <LanguageToggle />
+      <aside
+        className={cn(
+          "fixed start-0 top-0 z-40 h-screen border-r bg-card transition-all duration-300 overflow-hidden",
+          isCollapsed
+            ? "w-16 -translate-x-16 xs:translate-x-0"
+            : "w-60 md:w-64 translate-x-0"
+        )}
+      >
+        <div className="flex h-full flex-col">
+          {/* Header */}
+          <div className="flex h-16 items-center justify-between border-b px-4">
+            {!isCollapsed && (
+              <h1 className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Biscuit Factory
+              </h1>
+            )}
           </div>
-          <Button
-            variant="outline"
-            className="w-full justify-start gap-2"
-            onClick={handleLogout}
-          >
-            <LogOut className="h-5 w-5" />
-            {!isCollapsed && <span>{t("nav.logout")}</span>}
-          </Button>
+
+          {/* Navigation */}
+          <nav className="flex-1 space-y-1 p-4 overflow-y-auto">
+            {filteredNavItems.map((item) => {
+              item.path === "/";
+              return (
+                <NavLink
+                  to={item.path}
+                  key={item.path}
+                  className={({ isActive }) =>
+                    cn(
+                      "flex items-center gap-3 rounded-lg px-3 py-2 transition-colors",
+                      isActive
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+                      isCollapsed && "justify-center"
+                    )
+                  }
+                >
+                  <item.icon className="h-5 w-5 shrink-0" />
+                  {!isCollapsed && <span>{item.label}</span>}
+                </NavLink>
+              );
+            })}
+          </nav>
+
+          {/* Footer */}
+          <div className={`border-t p-4 ${isCollapsed && "px-2"}`}>
+            <div className="flex items-center gap-2 mb-3">
+              <ThemeToggle />
+              <LanguageToggle />
+            </div>
+            <Button
+              variant="outline"
+              className="w-full justify-start gap-2 transition-all"
+              onClick={handleLogout}
+            >
+              <LogOut className="h-5 w-5" />
+              {!isCollapsed && <span>{t("nav.logout")}</span>}
+            </Button>
+          </div>
         </div>
-      </div>
-    </aside>
+      </aside>
+    </>
   );
 };

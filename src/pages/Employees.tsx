@@ -251,7 +251,7 @@ const Employees = () => {
         <EmployeesForm formik={formik} />
       </Modal>
       <div className="space-y-6">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col xs:flex-row gap-4 items-start xs:items-center justify-between">
           <div>
             <h1 className="text-4xl font-bold mb-2">{t("employees.title")}</h1>
             <p className="text-muted-foreground">
@@ -259,7 +259,7 @@ const Employees = () => {
             </p>
           </div>
           <Button
-            className="gap-2"
+            className="gap-2 w-full xs:w-auto"
             onClick={() => {
               setOpen(true);
               setOperationType("creat");
@@ -286,15 +286,15 @@ const Employees = () => {
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="all" className="space-y-4">
-              <TabsList className="grid w-full grid-cols-4">
-                <TabsTrigger value="all">All Employees</TabsTrigger>
-                <TabsTrigger value="morning">
+              <TabsList className="flex gap-1 justify-evenly overflow-x-auto overflow-y-hidden scrollbar-hide">
+                <TabsTrigger className="flex-1 px-4" value="all">All Employees</TabsTrigger>
+                <TabsTrigger className="flex-1 px-4" value="morning">
                   {t("employees.morning")}
                 </TabsTrigger>
-                <TabsTrigger value="evening">
+                <TabsTrigger className="flex-1 px-4" value="evening">
                   {t("employees.evening")}
                 </TabsTrigger>
-                <TabsTrigger value="night">{t("employees.night")}</TabsTrigger>
+                <TabsTrigger className="flex-1 px-4" value="night">{t("employees.night")}</TabsTrigger>
               </TabsList>
               <TabsContent value="all">
                 <EmployeeTable employees={filteredEmployees} />

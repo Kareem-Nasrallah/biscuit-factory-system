@@ -112,7 +112,7 @@ const Dashboard = () => {
               <CardDescription>Weekly production overview</CardDescription>
             </CardHeader>
             <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
+              <ResponsiveContainer width="100%" height={300} className='-ms-4'>
                 <LineChart data={productionTrend}>
                   <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
                   <XAxis dataKey="day" className="text-xs" />
@@ -142,7 +142,7 @@ const Dashboard = () => {
               <CardDescription>Efficiency by production line</CardDescription>
             </CardHeader>
             <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
+              <ResponsiveContainer width="100%" height={300} className='-ms-4'>
                 <BarChart data={linePerformance}>
                   <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
                   <XAxis dataKey="name" className="text-xs" />
@@ -185,7 +185,7 @@ const Dashboard = () => {
               </div>
             ))}
             {pendingOrders.slice(0, 2).map((order) => (
-              <div key={order.id} className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
+              <div key={order.id} className="flex items-center justify-between p-3 rounded-lg bg-muted/50 gap-2">
                 <div className="flex items-center gap-3">
                   <ShoppingCart className="h-5 w-5 text-primary" />
                   <div>
@@ -195,7 +195,7 @@ const Dashboard = () => {
                     </p>
                   </div>
                 </div>
-                <Badge variant="outline" className="border-primary text-primary">
+                <Badge variant="outline" className="border-primary text-primary whitespace-nowrap">
                   {order.status}
                 </Badge>
               </div>

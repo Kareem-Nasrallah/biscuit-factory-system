@@ -9,16 +9,16 @@
   },
   {
     "id": "usr-003",
-    "username": "production_manager",
-    "password": "productionManager123",
+    "username": "production_mgr",
+    "password": "productionMgr123",
     "role": "ProductionManager",
     "employeeId": "emp-003",
     "email": "mohammed.ali@biscuitfactory.com"
   },
   {
     "id": "usr-002",
-    "username": "inventory_manager",
-    "password": "inventoryManager123",
+    "username": "inventory_mgr",
+    "password": "inventoryMgr123",
     "role": "InventoryManager",
     "employeeId": "emp-002",
     "email": "fatima@biscuitfactory.com"

@@ -13,7 +13,10 @@
     "Credentials": {
       "inventoryManager": "Inventory Manager",
       "owner": "Owner",
+      "password": "Password",
       "productionManager": "Production Manager",
+      "username": "Username",
+      "role": "Role",
       "title": "Demo Credentials:"
     },
     "login": "Login",
